@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .board {
-    background-image: url("../public/board.png");
-    background-repeat: repeat-y repeat-x;
-  }
+.board {
+  background-image: url("../public/board.png");
+  background-repeat: repeat-y repeat-x;
+}
+
+.post-modal {
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
 }

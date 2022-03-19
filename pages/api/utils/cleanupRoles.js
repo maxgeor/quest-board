@@ -1,4 +1,4 @@
-import Role from "../../components/Role";
+import Role from "../../../components/Role";
 
 const cleanupRoles = (roles, otherRoles) => {
   const allRoles = otherRoles ? [...roles, ...otherRoles.split(', ')] : roles;

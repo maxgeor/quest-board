@@ -1,6 +1,6 @@
 import { table, minifyRecords } from './utils/Airtable';
 
-export default async (req, res) => {
+const getPosts = async (req, res) => {
   try {
     const records = await table.select({ view: 'posts' }).firstPage();
     const minifiedRecords = minifyRecords(records);
@@ -13,3 +13,4 @@ export default async (req, res) => {
   }
 }
 
+export default getPosts
