@@ -10,6 +10,8 @@ module.exports = {
     colors: {
       ...colors,
       gray: colors.stone,
+      // black: '#130B05',
+      black: '#090706',
     },
     fontFamily: {
       serif: ['EB Garamond', 'serif'],
