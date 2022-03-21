@@ -12,3 +12,45 @@
   background-image: url("../public/board-logo.png");
   background-repeat: repeat-y repeat-x;
 }
+
+@layer base {
+  #quest-description h1 {
+    @apply text-4xl font-medium mb-4 mt-12 first:mt-0;
+  }
+  #quest-description h2 {
+    @apply text-3xl font-medium mb-4 mt-12 first:mt-0;
+  }
+  #quest-description h3 {
+    @apply text-2xl font-medium mb-4 mt-12 first:mt-0;
+  }
+  #quest-description p {
+    @apply mb-6 last:mb-0;
+  }
+  #quest-description a {
+    @apply font-medium underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-600 hover:decoration-gray-900 underline-offset-4 text-gray-900;
+  }
+  #quest-description blockquote {
+    @apply border-l text-lg border-gray-400 pl-4 text-gray-700 mb-6;
+  }
+  #quest-description pre {
+    @apply px-6 py-4 rounded-md bg-gray-300 mb-6;
+  }
+  #quest-description pre code {
+    @apply whitespace-pre-wrap text-lg;
+  }
+  #quest-description p code {
+    @apply bg-gray-300 leading-7 py-1 px-2 rounded whitespace-pre-wrap text-lg;
+  }
+  #quest-description ul {
+    @apply list-disc list-inside my-6;
+  }
+  #quest-description ol {
+    @apply list-decimal list-inside my-6;
+  }
+  #quest-description li {
+    @apply my-2 first:mt-0 last:mb-0;
+  }
+  #quest-description ul li {
+    @apply marker:pr-0 relative left-1;
+  }
+}
