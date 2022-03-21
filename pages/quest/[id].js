@@ -57,7 +57,7 @@ export default function Quest({ quest }) {
               <Group /> 
               {quest.fields.project_link 
                 ? <Link href={`${quest.fields.project_link}`}>
-                    <a target="_blank" rel="noreferrer" className='text-gray-800 text-xl underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-500 hover:decoration-gray-900 underline-offset-4'>{quest.fields.project.trim()}</a>
+                    <a target="_blank" rel="noreferrer" className='text-gray-800 text-xl underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-400 hover:decoration-gray-900 underline-offset-4'>{quest.fields.project.trim()}</a>
                   </Link>
                 : <span className='text-gray-800 text-xl'>{quest.fields.project.trim()}</span>
               }
@@ -78,8 +78,8 @@ export default function Quest({ quest }) {
               </div>  
             </>}
           </div>
-          <p className='w-full text-lg text-center p-4 px-6  border-y border-gray-400/50 border-dashed text-gray-600'>
-            Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-300 border border-gray-400/20 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" class='underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-500 hover:decoration-gray-900 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
+          <p className='w-full text-lg text-center p-4 px-6  border-y border-gray-300 text-gray-600'>
+            Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-300/90 border border-gray-400/15 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" class='underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-400 hover:decoration-gray-900 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
           </p>
         </div>
         <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-12 text-xl text-gray-700'>
