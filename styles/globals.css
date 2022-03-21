@@ -15,25 +15,25 @@
 
 @layer base {
   #quest-description h1 {
-    @apply text-gray-900 text-3xl font-semibold mb-4 mt-12 first:mt-0;
+    @apply text-gray-900 text-3xl font-semibold mb-4 mt-14 first:mt-0;
   }
   #quest-description h1 strong {
     @apply font-semibold;
   }
   #quest-description h2 {
-    @apply text-gray-900 text-2xl font-semibold mb-4 mt-12 first:mt-0;
+    @apply text-gray-900 text-2xl font-semibold mb-4 mt-14 first:mt-0;
   }
   #quest-description h2 strong {
     @apply font-semibold;
   }
   #quest-description h3 {
-    @apply text-gray-900 text-2xl font-semibold mb-4 mt-12 first:mt-0;
+    @apply text-gray-900 text-2xl font-semibold mb-4 mt-14 first:mt-0;
   }
   #quest-description h3 strong {
     @apply font-semibold;
   }
   #quest-description p {
-    @apply mb-6 last:mb-0;
+    @apply mb-7 last:mb-0;
   }
   #quest-description strong {
     @apply text-gray-800;
@@ -42,10 +42,10 @@
     @apply font-medium underline decoration-1 decoration-dashed hover:decoration-solid underline-offset-4 text-gray-900;
   }
   #quest-description blockquote {
-    @apply border-l text-lg border-gray-400 pl-4 text-gray-700 mb-6;
+    @apply border-l text-lg border-gray-400 pl-4 text-gray-700 mb-7;
   }
   #quest-description pre {
-    @apply px-6 py-4 rounded-md bg-gray-300 mb-6;
+    @apply px-6 py-4 rounded-md bg-gray-300 mb-7;
   }
   #quest-description pre code {
     @apply whitespace-pre-wrap text-lg;
@@ -60,7 +60,7 @@
     @apply list-decimal list-inside my-7;
   }
   #quest-description li {
-    @apply my-3 first:mt-0 last:mb-0;
+    @apply my-2 first:mt-0 last:mb-0;
   }
   #quest-description ul li {
     @apply marker:pr-0 relative left-1;
