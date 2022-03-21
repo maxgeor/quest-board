@@ -4,6 +4,7 @@ import Group from '../../icons/Group'
 import bundleRoles from '../api/utils/bundleRoles'
 import ReactMarkdown from 'react-markdown'
 import { table, minifyRecords } from '../api/utils/Airtable'
+import { useRouter } from 'next/router'
 
 // export async function getStaticPaths() {
 //   try {
@@ -78,8 +79,8 @@ export default function Quest({ quest }) {
 
 export async function getServerSideProps(context) {
   try {
-    const { id } = context.query;
-    const record = await table.find(context.params.id)
+    const { id } = await context.query;
+    const record = await table.find(id)
     return { 
       props: { 
         quest: JSON.parse(JSON.stringify(record)) 
