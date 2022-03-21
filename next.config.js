@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    AIRTABLE_API_KEY: 'keymsXBzW0ujThaD0',
-    AIRTABLE_BASE_ID: 'appoTO5R9kztCEXwT',
-    AIRTABLE_POST_TABLE_ID: 'tblJ76zWtkG4En7kO'
+    AIRTABLE_API_KEY: process.env.AIRTABLE_API_KEY,
+    AIRTABLE_BASE_ID: process.env.AIRTABLE_BASE_ID,
+    AIRTABLE_POST_TABLE_ID: process.env.AIRTABLE_POST_TABLE_ID,
   }
 }
 
