@@ -5,34 +5,21 @@ import bundleRoles from '../api/utils/bundleRoles'
 import ReactMarkdown from 'react-markdown'
 import { table, minifyRecords } from '../api/utils/Airtable'
 
-export async function getStaticPaths() {
-  try {
-    const records = await table.select({ view: 'quests' }).firstPage();
-    const minifiedRecords = minifyRecords(records);
-    const paths = minifiedRecords.map(record => ({
-      params: { id: record.id },
-    }));
-    return { 
-      paths,
-      fallback: false
-    }
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-    const record = await table.find(context.params.id)
-    return { 
-      props: { 
-        quest: JSON.parse(JSON.stringify(record)) 
-      }
-    }
-  } catch (e) {
-    console.error(e)
-  }
-}
+// export async function getStaticPaths() {
+//   try {
+//     const records = await table.select({ view: 'quests' }).firstPage();
+//     const minifiedRecords = minifyRecords(records);
+//     const paths = minifiedRecords.map(record => ({
+//       params: { id: record.id },
+//     }));
+//     return { 
+//       paths,
+//       fallback: false
+//     }
+//   } catch (e) {
+//     console.error(e)
+//   }
+// }
 
 export default function Quest({ quest }) {
   const bundledRoles = bundleRoles(quest.fields.roles, quest.fields.other_roles);
@@ -87,4 +74,18 @@ export default function Quest({ quest }) {
       </main>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  try {
+    const { id } = context.query;
+    const record = await table.find(context.params.id)
+    return { 
+      props: { 
+        quest: JSON.parse(JSON.stringify(record)) 
+      }
+    }
+  } catch (e) {
+    console.error(e)
+  }
 }
