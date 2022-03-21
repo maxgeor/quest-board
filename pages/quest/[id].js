@@ -36,7 +36,6 @@ export async function getStaticProps(context) {
 
 export default function Quest({ quest }) {
   const bundledRoles = bundleRoles(quest.fields.roles, quest.fields.other_roles);
-  console.log(quest);
 
   return (
     <div className='w-full max-auto sm:pb-24'>
