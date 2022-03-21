@@ -30,7 +30,7 @@
     @apply text-gray-800;
   }
   #quest-description a {
-    @apply font-medium underline decoration-1 decoration-gray-700 hover:decoration-gray-900 underline-offset-4 text-gray-900;
+    @apply font-medium underline decoration-1 decoration-gray-600 hover:decoration-gray-900 underline-offset-4 text-gray-900;
   }
   #quest-description blockquote {
     @apply border-l text-lg border-gray-400 pl-4 text-gray-700 mb-6;
