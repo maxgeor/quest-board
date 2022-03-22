@@ -1,4 +1,4 @@
-import Role from "../../../components/Role";
+import Role from "../components/Role";
 
 const bundleRoles = (roles, otherRoles, useUnderlines) => {
   const allRoles = otherRoles ? [...roles, ...otherRoles.split(', ')] : roles;
