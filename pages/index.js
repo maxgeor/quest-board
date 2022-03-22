@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Card from '../components/Card'
-import { table, minifyRecords } from './api/utils/Airtable'
+import { minifyRecords } from '../utils/Airtable'
 
 export default function Home({ quests }) {
   return (
@@ -30,8 +30,12 @@ export default function Home({ quests }) {
 
 export async function getServerSideProps() {
   try {
-    const records = await table.select({ view: 'quests' }).firstPage()
-    return { props: { quests: minifyRecords(records.reverse()) } }
+    const res = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/quests?view=quests`, {
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
+    });
+    const data = await res.json();
+    const records = minifyRecords(data.records);
+    return { props: { quests: records.reverse() } }
   } catch (e) {
     console.log(e)
   }

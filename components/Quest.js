@@ -1,6 +1,6 @@
 import React from 'react'
-import Bag from '../icons/Bag.js'
 import Link from 'next/link'
+import Bag from '../icons/Bag.js'
 
 export default function Quest({ quest }) {
   return (
