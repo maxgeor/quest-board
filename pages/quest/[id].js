@@ -3,18 +3,22 @@ import Link from 'next/link'
 import Bag from '../../icons/Bag'
 import Group from '../../icons/Group'
 import ReactMarkdown from 'react-markdown'
-import { bundleRoles, getQuestTitle } from '../../utils/handleRoles'
+import { bundleRoles, getAllRoles } from '../../utils/handleRoles'
 
 export default function Quest({ quest }) {
   const bundledRoles = bundleRoles(quest.fields.roles, quest.fields.other_roles);
-  const questTitle = getQuestTitle(quest.fields.roles, quest.fields.other_roles);
+  
+  const getQuestTitle = () => {
+    const allRoles = getAllRoles(quest.fields.roles, quest.fields.other_roles);
+    return `${allRoles.join(', ')} Needed!`;
+  }
 
   return (
     <>
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Quest: {questTitle}</title>
+        <title>Quest: {getQuestTitle()}</title>
       </Head>
       <div className='w-full max-auto sm:pb-24'>
         <header className='flex justify-center my-10'>

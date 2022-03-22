@@ -5,8 +5,6 @@ const getAllRoles = (roles, otherRoles) => {
           .filter(role => role !== 'Other...');
 }
 
-const getQuestTitle = (roles, otherRoles) => `${getAllRoles(roles, otherRoles).join(', ')} needed!`;
-
 const bundleRoles = (roles, otherRoles, useUnderlines) => {
   const allRoles = getAllRoles(roles, otherRoles);
 
@@ -20,4 +18,4 @@ const bundleRoles = (roles, otherRoles, useUnderlines) => {
   });
 }
 
-export { bundleRoles, getQuestTitle };
+export { bundleRoles, getAllRoles };
