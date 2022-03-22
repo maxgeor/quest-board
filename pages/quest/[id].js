@@ -1,38 +1,8 @@
 import Link from 'next/link'
 import Bag from '../../icons/Bag'
 import Group from '../../icons/Group'
-import bundleRoles from '../api/utils/bundleRoles'
 import ReactMarkdown from 'react-markdown'
-import { table, minifyRecords } from '../api/utils/Airtable'
-
-export async function getStaticPaths() {
-  try {
-    const records = await table.select({ view: 'quests' }).firstPage();
-    const minifiedRecords = minifyRecords(records);
-    const paths = minifiedRecords.map(record => ({
-      params: { id: record.id },
-    }));
-    return { 
-      paths,
-      fallback: false
-    }
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-    const record = await table.find(context.params.id)
-    return { 
-      props: { 
-        quest: JSON.parse(JSON.stringify(record)) 
-      }
-    }
-  } catch (e) {
-    console.error(e)
-  }
-}
+import bundleRoles from '../../utils/bundleRoles'
 
 export default function Quest({ quest }) {
   const bundledRoles = bundleRoles(quest.fields.roles, quest.fields.other_roles);
@@ -87,4 +57,17 @@ export default function Quest({ quest }) {
       </main>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  try {
+    const { id } = await context.params;
+    const res = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/quests/${id}`, {
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
+    });
+    const data = await res.json();
+    return { props: { quest: data } }
+  } catch (e) {
+    console.log(e)
+  }
 }
