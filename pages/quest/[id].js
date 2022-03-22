@@ -29,7 +29,7 @@ export default function Quest({ quest }) {
             </div>
           </Link>
         </header>
-        <main className={`py-8 pb-40 px-6 sm:px-16 mx-auto min-h-screen h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
+        <main className={`py-8 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-6'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-8'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
