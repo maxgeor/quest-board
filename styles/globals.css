@@ -5,12 +5,10 @@
 @tailwind utilities;
 
 .board {
-  background-image: url("../public/board.png");
-  background-repeat: repeat-y repeat-x;
+  background: url("../public/board.png");
 }
 .board-logo {
-  background-image: url("../public/board-logo.png");
-  background-repeat: repeat-y repeat-x;
+  background: url("../public/board-logo.png");
 }
 
 @layer base {
