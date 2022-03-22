@@ -13,12 +13,14 @@ module.exports = {
       // black: '#130B05',
       black: '#090706',
     },
-    
     fontFamily: {
       serif: ['EB Garamond', 'serif'],
       mono: ['Inconsolata', 'monospace'],
     },
     extend: {
+      backgroundColor: {
+        board: '#1A1612'
+      },
       maxWidth: {
         '3xl': '48rem',
         '5xl': '60rem',
