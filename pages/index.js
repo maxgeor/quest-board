@@ -27,7 +27,10 @@ export default function Home({ quests }) {
               <h2 className='transition duration-75 opacity-90 tracking-wide text-2xl text-gray-300 font-serif text-center'>WANTED: Quests!</h2>  
               <h2 className='text-3xl font-medium font-serif text-center tracking-wide'><span className='font-extrabold'>+</span> Post a Project</h2>  
             </a>
-            {quests.map(post => <Card id={post.id} key={post.id} quest={post.fields} />)}
+            {quests.length
+              ? quests.map(quest => <Card id={quest.id} key={quest.id} quest={quest.fields} />)
+              : <div className='w-96'></div>
+            }
           </div>
         </main>
       </div>
