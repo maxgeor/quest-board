@@ -23,7 +23,7 @@ export default function Quest({ quest }) {
       <div className='w-full max-auto sm:pb-24'>
         <header className='flex justify-center my-10'>
           <Link href='/'>
-            <div className='board-logo bg-board flex flex-col items-center cursor-default pt-4 pb-5 px-6 transition duration-75 hover:scale-101 md:active:scale-100 transform -rotate-1 hover:-rotate-2 border-4 border-gray-700/80 hover:border-gray-700 rounded-md hover:bg-gray-800 w-min'>
+            <div className='board-logo bg-board flex flex-col items-center cursor-default pt-4 pb-5 px-6 transition duration-75 hover:scale-101 md:active:scale-100 transform -rotate-1 hover:-rotate-2 border-4 border-gray-700/75 hover:border-gray-700 rounded-md hover:bg-gray-800 w-min'>
               <span className='whitespace-nowrap text-sm uppercase tracking-wider leading-4'>The</span>
               <h1 className='whitespace-nowrap text-2xl text-center uppercase tracking-wider font-medium'>Quest Board</h1>
             </div>
