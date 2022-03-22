@@ -1,8 +1,7 @@
 import React from 'react'
-import Role from './Role'
 import Bag from '../icons/Bag.js';
 import Link from 'next/link';
-import bundleRoles from '../utils/bundleRoles';
+import { bundleRoles } from '../utils/handleRoles';
 
 export default function Card({ id, quest }) {
   const bundledRoles = bundleRoles(quest.roles, quest.other_roles, { useUnderlines: true });
