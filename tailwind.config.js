@@ -10,7 +10,6 @@ module.exports = {
     colors: {
       ...colors,
       gray: colors.stone,
-      // black: '#130B05',
       black: '#090706',
     },
     fontFamily: {
@@ -18,6 +17,11 @@ module.exports = {
       mono: ['Inconsolata', 'monospace'],
     },
     extend: {
+      boxShadow: {
+        inner: 'inset 0 3px 6px 1px rgb(0 0 0 / 0.05);',
+        xl: '0 15px 20px -6px rgb(0 0 0 / 1), 0 6px 9px -6px rgb(0 0 0 / 1);',
+        '2xl': '0 30px 60px -16px rgb(0 0 0 / 1);',
+      },
       backgroundColor: {
         board: '#1A1612'
       },
