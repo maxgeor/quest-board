@@ -8,7 +8,7 @@ export default function Card({ id, quest }) {
 
   return (
     <Link href={`quest/${id}`}>
-      <div className='shadow-xl z-10 min-h-full space-y-8 flex flex-col md:justify-between items-center hover:scale-101 md:active:scale-100 transition duration-75 rounded-md w-full transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 h-min bg-gray-200 hover:bg-gray-100 text-black p-6 md:p-8 cursor-default'>
+      <div className='md:min-h-[14rem] h-full max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl z-10 min-h-full space-y-8 flex flex-col md:justify-between items-center hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black p-6 md:p-8 cursor-default'>
         <div className='max-w-sm mx-auto space-y-4'>
           <h2 className='text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
             {bundledRoles} needed!
