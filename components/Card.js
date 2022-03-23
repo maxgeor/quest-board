@@ -17,7 +17,7 @@ export default function Card({ id, quest }) {
             <span className='text-gray-600 text-sm lg:text-base mr-0.5'>for</span> {quest.project}
           </p>  
         </div>
-        <div className='w-full flex items-center justify-center flex-wrap space-x-4 mx-8'>
+        <div className='w-full flex items-center justify-center flex-wrap space-y-1 space-x-4 mx-8'>
           <span className='text-sm font-mono text-center text-gray-600'>{quest.posted_on}</span>
           {quest.has_reward && <>
           <span className='text-gray-400'>/</span>
