@@ -19,8 +19,8 @@ module.exports = {
     extend: {
       boxShadow: {
         inner: 'inset 0 4px 8px 1px rgb(0 0 0 / 0.1);',
-        lg: '0 10px 15px -3px rgb(0 0 0 / 0.12), 0 4px 6px -4px rgb(0 0 0 / 0.12)',
-        xl: '0 20px 25px -5px rgb(0 0 0 / 0.12), 0 8px 10px -6px rgb(0 0 0 / 0.12);',
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);',
         '2xl': '0 30px 60px -16px rgb(0 0 0 / 1);',
       },
       backgroundColor: {

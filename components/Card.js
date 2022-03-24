@@ -8,7 +8,7 @@ export default function Card({ id, quest }) {
 
   return (
     <Link href={`quest/${id}`}>
-      <div className='md:min-h-[14rem] h-full max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl z-10 min-h-full space-y-8 flex flex-col md:justify-between items-center hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black p-6 md:p-8 cursor-default'>
+      <div className='md:min-h-[14rem] h-full max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl active:shadow-lg z-10 min-h-full space-y-8 flex flex-col md:justify-between items-center hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black p-6 md:p-8 cursor-default'>
         <div className='max-w-sm mx-auto space-y-4'>
           <h2 className='text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
             {bundledRoles} needed!
@@ -23,13 +23,18 @@ export default function Card({ id, quest }) {
           <span className='text-gray-400'>/</span>
           <div className='flex items-center font-serif space-x-1.5'>
             <Bag /> 
-            <span className='text-gray-800 space-x-1'>
-              <span className='text-xl'>{quest.reward_amount}</span>
-              <span className='text-sm'>
-                {quest.custom_reward_type
-                  ? quest.custom_reward_type.trim()
-                  : quest.reward_type}  
-              </span>
+            <span className='text-gray-800'>
+              {quest.custom_reward
+                ? quest.custom_reward
+                : <span className='space-x-1'>
+                    <span className='text-xl'>{quest.reward_amount}</span>
+                    <span className='text-sm'>
+                      {quest.custom_token
+                        ? quest.custom_token.toUpperCase().trim()
+                        : quest.reward_type}  
+                    </span>
+                  </span>
+              }
             </span>
           </div>  
           </>}

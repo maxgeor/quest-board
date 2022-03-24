@@ -48,13 +48,17 @@ export default function Quest({ quest }) {
                 <div className='flex items-center font-serif space-x-1.5'>
                   <Bag /> 
                   <span className='text-gray-800 space-x-1'>
-                    <span className='text-xl'>{quest.fields.reward_amount}</span>
-                    <span className='text-sm'>
-                      {quest.fields.custom_reward_type
-                        ? quest.fields.custom_reward_type.trim()
-                        : quest.fields.reward_type}  
-                    </span>
-                    
+                    {quest.fields.custom_reward
+                      ? quest.fields.custom_reward
+                      : <span>
+                          <span className='text-xl'>{quest.fields.reward_amount}</span>
+                          <span className='text-sm'>
+                            {quest.fields.custom_token
+                              ? quest.fields.custom_token.toUpperCase().trim()
+                              : quest.fields.reward_type}  
+                          </span>
+                        </span>
+                    }
                   </span>
                 </div>  
               </>}
@@ -63,7 +67,7 @@ export default function Quest({ quest }) {
               Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-300/90 border border-gray-400/15 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid decoration-gray-500 hover:decoration-gray-900 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
             </p>
           </div>
-          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-14 text-xl text-gray-700'>
+          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-12 text-xl text-gray-700'>
             <ReactMarkdown>{quest.fields.project_description}</ReactMarkdown>
           </article>
         </main>
