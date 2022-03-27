@@ -52,10 +52,10 @@
     @apply bg-gray-300 py-1 px-2 rounded whitespace-pre-wrap text-lg;
   }
   #quest-description ul {
-    @apply list-disc list-inside my-7;
+    @apply list-disc list-inside mb-7;
   }
   #quest-description ol {
-    @apply list-decimal list-inside my-7;
+    @apply list-decimal list-inside mb-7;
   }
   #quest-description li {
     @apply my-2 first:mt-0 last:mb-0;

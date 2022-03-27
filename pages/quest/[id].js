@@ -33,7 +33,7 @@ export default function Quest({ quest }) {
           <span className='text-sm font-mono text-center text-gray-600 mb-6'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-8'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
-            <div className='text-xl flex flex-wrap items-center justify-center gap-y-1 gap-x-4'>
+            <div className='text-xl flex flex-wrap items-center justify-center gap-y-1 space-x-4'>
               <div className='flex items-center font-serif space-x-2.5'>
                 <Group /> 
                 {quest.fields.project_link 
