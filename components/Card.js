@@ -14,7 +14,7 @@ export default function Card({ id, quest }) {
             {bundledRoles} needed!
           </h3>
           <p className='text-xl font-serif text-gray-800 text-center mx-6'>
-            <span className='text-gray-600 text-sm lg:text-base mr-0.5'>for</span> {quest.project}
+            <span className='text-gray-600 text-sm md:text-base mr-0.5'>for</span> {quest.project}
           </p>  
         </div>
         <div className='w-full flex items-center justify-center flex-wrap gap-y-1 space-x-4 mx-8'>

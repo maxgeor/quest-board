@@ -11,6 +11,7 @@ module.exports = {
       ...colors,
       gray: colors.stone,
       black: '#090706',
+      'board-logo-border': '#312D2C'
     },
     fontFamily: {
       serif: ['EB Garamond', 'serif'],
