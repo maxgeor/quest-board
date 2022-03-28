@@ -8,6 +8,7 @@ export default function Home({ quests }) {
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>The Quest Board</title>
       </Head>
       <div className={`w-full text-gray-200 bg-black min-h-screen font-serif pb-40`}>
