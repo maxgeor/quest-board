@@ -22,7 +22,9 @@ export default function Card({ id, quest }) {
           {quest.has_reward && <>
           <span className='text-gray-400'>/</span>
           <div className='flex items-center font-serif space-x-1.5'>
-            <Bag /> 
+            <span className='transform rotate-3'>
+              <Bag /> 
+            </span>
             <span className='text-gray-800'>
               {quest.custom_reward
                 ? quest.custom_reward
