@@ -18,7 +18,7 @@ export default function Card({ id, quest }) {
           </p>  
         </div>
         {quest.has_reward && <>
-        <div className='bg-gray-300/50 border-l-2 border-gray-400/60 rounded-r p-2 w-full flex justify-center font-serif space-x-2'>
+        <div className='bg-gray-300/50 border-l-2 border-gray-400/50 rounded-r p-2 w-full flex justify-center font-serif space-x-2'>
           <span className='transform rotate-3'>
             <Bag /> 
           </span>
