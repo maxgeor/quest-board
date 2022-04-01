@@ -23,7 +23,7 @@ export default function Quest({ quest }) {
         <title>Quest: {getQuestTitle()}</title>
       </Head>
       <div className='w-full max-auto sm:pb-24'>
-        <header className='flex justify-center my-10'>
+        <header className='flex justify-center my-9'>
           <Link href='/'>
             <a className='shadow-inner board-logo bg-board flex flex-col items-center cursor-default pt-4 pb-5 px-6 transition duration-75 hover:scale-101 md:active:scale-100 transform -rotate-1 hover:-rotate-2 border-4 border-board-logo-border hover:border-gray-700 rounded-md hover:bg-gray-800 w-min'>
               <span className='whitespace-nowrap text-sm uppercase tracking-wider leading-4'>The</span>
@@ -31,9 +31,9 @@ export default function Quest({ quest }) {
             </a>
           </Link>
         </header>
-        <main className={`py-8 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
+        <main className={`py-7 pb-40 px-7 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-6'>{quest.fields.posted_on}</span>
-          <div className='w-full relative h-full space-y-12'>
+          <div className='w-full relative h-full space-y-9'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
             <div className='space-y-3 bg-gray-300/40 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
@@ -79,7 +79,7 @@ export default function Quest({ quest }) {
               </div>
             </div>
           </div>
-          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-12 text-xl text-gray-700'>
+          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-14 text-xl text-gray-700'>
             <ReactMarkdown>{quest.fields.project_description}</ReactMarkdown>
           </article>
         </main>
