@@ -35,7 +35,7 @@ export default function Quest({ quest }) {
           <span className='text-sm font-mono text-center text-gray-600 mb-7'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-9'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
-            <div className='space-y-3 bg-gray-300/50 border border-gray-300/70 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
+            <div className='space-y-3 bg-gray-300/50 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                   <Group /> 
