@@ -8,7 +8,7 @@ export default function Card({ id, quest }) {
 
   return (
     <Link href={`quest/${id}`}>
-      <a className={`flex flex-col justify-between items-center ${quest.has_reward ? 'space-y-5' : 'space-y-7'} p-7 h-full min-h-[12rem] md:min-h-[14rem] max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl active:shadow-lg z-10 md:justify-between hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black cursor-default`}>
+      <a className={`flex flex-col justify-between items-center ${quest.has_reward ? 'space-y-5' : 'space-y-7'} p-7 h-full min-h-[12rem] md:min-h-[13rem] max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl active:shadow-lg z-10 md:justify-between hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform md:odd:-rotate-0.25 odd:hover:-rotate-1 md:even:rotate-0.25 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black cursor-default`}>
         <div className='max-w-sm mx-auto space-y-3'>
           <h3 className='text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
             {bundledRoles} needed!
