@@ -33,9 +33,9 @@ export default function Quest({ quest }) {
         </header>
         <main className={`py-7 pb-40 px-7 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-7'>{quest.fields.posted_on}</span>
-          <div className='w-full relative h-full space-y-12'>
+          <div className='w-full relative h-full space-y-9'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
-            <div className='space-y-3 bg-gray-300/40 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
+            <div className='space-y-3 bg-gray-300/50 border border-gray-300/80 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                   <Group /> 
@@ -50,7 +50,7 @@ export default function Quest({ quest }) {
               {quest.fields.has_reward && <>
                 <hr className='border-gray-300 ml-10' />
                 <div className='flex items-center font-serif space-x-3'>
-                  <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
+                  <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start transform rotate-3'>
                     <Bag />
                   </span>
                   <span className='text-gray-800 space-x-1'>
@@ -74,7 +74,7 @@ export default function Quest({ quest }) {
                   <Hand /> 
                 </span>
                 <p className=' text-lg'>
-                  Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-300 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
+                  Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
                 </p>
               </div>
             </div>
