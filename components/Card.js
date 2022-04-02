@@ -19,7 +19,9 @@ export default function Card({ id, quest }) {
         </div>
         {quest.has_reward && <>
         <div className='bg-gray-300/50 rounded p-2 w-full flex justify-center font-serif space-x-2'>
-          <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
+          <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
+            <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
+          </span>
           <span className='text-gray-800'>
             {quest.custom_reward
               ? quest.custom_reward
