@@ -32,11 +32,11 @@ export default function Quest({ quest }) {
             </a>
           </Link>
         </header>
-        <main className={`py-7 pb-40 px-7 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
-          <span className='text-sm font-mono text-center text-gray-600 mb-7'>{quest.fields.posted_on}</span>
+        <main className={`py-6 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
+          <span className='text-sm font-mono text-center text-gray-600 mb-6'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-9 sm:space-y-12'>
             <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-900'>{bundledRoles} Needed!</h1>
-            <div className='space-y-3 bg-gray-300/50 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
+            <div className='space-y-3 bg-gray-300/50 p-6 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                   <Image alt="Group icon" src='/icons/group.png' width={24} height={24} />
@@ -80,7 +80,7 @@ export default function Quest({ quest }) {
               </div>
             </div>
           </div>
-          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-14 text-xl text-gray-700'>
+          <article id="quest-description" className='max-w-prose mr-auto first:mt-0 mt-12 text-xl text-gray-700'>
             <ReactMarkdown>{quest.fields.project_description}</ReactMarkdown>
           </article>
         </main>

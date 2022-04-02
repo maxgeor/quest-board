@@ -13,19 +13,19 @@
 
 @layer base {
   #quest-description h1 {
-    @apply text-gray-900 text-3xl font-semibold mb-5 mt-14 first:mt-0;
+    @apply text-gray-900 text-3xl font-semibold mb-5 mt-12 first:mt-0;
   }
   #quest-description h1 strong {
     @apply font-semibold;
   }
   #quest-description h2 {
-    @apply text-gray-900 text-2xl font-semibold mb-5 mt-14 first:mt-0;
+    @apply text-gray-900 text-3xl font-semibold mb-5 mt-12 first:mt-0;
   }
   #quest-description h2 strong {
     @apply font-semibold;
   }
   #quest-description h3 {
-    @apply text-gray-900 text-2xl font-semibold mb-5 mt-14 first:mt-0;
+    @apply text-gray-900 text-3xl font-semibold mb-5 mt-12 first:mt-0;
   }
   #quest-description h3 strong {
     @apply font-semibold;
