@@ -12,8 +12,8 @@ export default function Home({ quests }) {
         <title>The Quest Board</title>
       </Head>
       <div className={`w-full text-gray-200 bg-black min-h-screen font-serif pb-40`}>
-        <header className='pt-12 pb-14 px-5 space-y-7'>
-          <div className='flex flex-col items-center space-y-2'>
+        <header className='py-12 px-6 space-y-6'>
+          <div className='flex flex-col items-center space-y-1'>
             <span className='text-2xl md:text-3xl uppercase tracking-wider leading-7'>The</span>
             <h1 className='mx-6 text-5xl md:text-6xl text-center uppercase tracking-wider font-medium'>Quest Board</h1>
           </div>
