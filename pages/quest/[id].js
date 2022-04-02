@@ -50,7 +50,7 @@ export default function Quest({ quest }) {
               {quest.fields.has_reward && <>
                 <hr className='border-gray-300 ml-10' />
                 <div className='flex items-center font-serif space-x-3'>
-                  <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start transform rotate-3'>
+                  <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                     <Bag />
                   </span>
                   <span className='text-gray-800 space-x-1'>
