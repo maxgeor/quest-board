@@ -1,6 +1,6 @@
 import React from 'react'
-import Bag from '../icons/Bag.js';
 import Link from 'next/link';
+import Image from 'next/image';
 import { bundleRoles } from '../utils/handleRoles';
 
 export default function Card({ id, quest }) {
@@ -19,9 +19,7 @@ export default function Card({ id, quest }) {
         </div>
         {quest.has_reward && <>
         <div className='bg-gray-300/50 rounded p-2 w-full flex justify-center font-serif space-x-2'>
-          <span>
-            <Bag /> 
-          </span>
+          <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
           <span className='text-gray-800'>
             {quest.custom_reward
               ? quest.custom_reward

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Hand from '../../icons/Hand'
 import Bag from '../../icons/Bag'
 import Group from '../../icons/Group'
@@ -38,7 +39,7 @@ export default function Quest({ quest }) {
             <div className='space-y-3 bg-gray-300/50 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                  <Group /> 
+                  <Image alt="Group icon" src='/icons/group.png' width={24} height={24} />
                 </span>
                 {quest.fields.project_link 
                   ? <Link href={`${quest.fields.project_link}`}>
@@ -51,7 +52,7 @@ export default function Quest({ quest }) {
                 <hr className='border-gray-300 ml-10' />
                 <div className='flex items-center font-serif space-x-3'>
                   <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                    <Bag />
+                    <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
                   </span>
                   <span className='text-gray-800 space-x-1'>
                     {quest.fields.custom_reward
@@ -71,7 +72,7 @@ export default function Quest({ quest }) {
               <hr className='border-gray-300 ml-10' />
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                  <Hand /> 
+                  <Image alt="Hand icon" src='/icons/hand.png' width={24} height={24} />
                 </span>
                 <p className='text-lg'>
                   Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid  decoration-gray-500 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
