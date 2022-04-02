@@ -35,7 +35,7 @@ export default function Quest({ quest }) {
         <main className={`py-7 pb-40 px-7 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-7'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-9 sm:space-y-12'>
-            <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-800'>{bundledRoles} Needed!</h1>
+            <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-900'>{bundledRoles} Needed!</h1>
             <div className='space-y-3 bg-gray-300/50 p-5 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
               <div className=' flex items-center font-serif space-x-3'>
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
