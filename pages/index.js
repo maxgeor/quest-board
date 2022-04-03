@@ -19,7 +19,7 @@ export default function Home({ quests }) {
             <h1 className='mx-6 text-5xl md:text-6xl text-center uppercase tracking-wider font-medium'>Quest Board</h1>
           </div>
           <h2 className='font-mono text-lg md:text-xl text-center mx-2 sm:mx-12'>
-            Post & discover <Link href="https://www.lootproject.com/"><a className='text-xl md:text-2xl h-8 font-serif underline underline-offset-4 decoration-dashed decoration-1 decoration-gray-400'>Loot</a></Link> projects in need of Adventurers.
+            Post & discover <Link href="https://www.lootproject.com/"><a className='text-xl md:text-2xl h-8 font-serif'>Loot</a></Link> projects in need of Adventurers.
           </h2>
         </header>
         <main className='shadow-inner board bg-board w-full sm:max-w-lg md:max-w-5xl sm:rounded-xl min-h-screen sm:min-h-[80vh] md:min-h-screen border-12 border-x-0 sm:border-x-12 mx-auto border-gray-800 p-6'>

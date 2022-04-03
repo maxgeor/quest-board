@@ -18,23 +18,25 @@ export default function Card({ id, quest }) {
           </p>  
         </div>
         {quest.has_reward && <>
-        <div className='bg-gray-300/40 border-l-2 border-gray-400/50 rounded-r py-2 px-2.5 w-full flex justify-center font-serif space-x-2'>
-          <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
-            <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
-          </span>
-          <p className='text-gray-800'>
-            {quest.custom_reward
-              ? quest.custom_reward
-              : <span className='space-x-1'>
-                  <span className='text-lg'>{quest.reward_amount}</span>
-                  <span className='text-sm'>
-                    {quest.custom_token
-                      ? quest.custom_token.toUpperCase().trim()
-                      : quest.reward_type}  
+        <div className='bg-gray-300/40 border-l-2 border-gray-400/50 rounded-r py-2 px-3 w-full'>
+          <div className='flex justify-center font-serif -ml-0.5 space-x-2'>
+            <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
+              <Image alt="Reward" src='/icons/bag.png' width={24} height={24} />
+            </span>
+            <p className='text-gray-800'>
+              {quest.custom_reward
+                ? quest.custom_reward
+                : <span className='space-x-1'>
+                    <span className='text-lg'>{quest.reward_amount}</span>
+                    <span className='text-sm'>
+                      {quest.custom_token
+                        ? quest.custom_token.toUpperCase().trim()
+                        : quest.reward_type}  
+                    </span>
                   </span>
-                </span>
-            }
-          </p>
+              }
+            </p>
+          </div>
         </div>
         </>}
         <span className='text-sm font-mono text-center text-gray-500'>{quest.posted_on}</span>
