@@ -27,8 +27,8 @@ export default function Quest({ quest }) {
         <header className='flex justify-center my-9'>
           <Link href='/'>
             <a className='shadow-inner board-logo bg-board flex flex-col items-center cursor-default pt-4 pb-5 px-6 transition duration-75 hover:scale-101 md:active:scale-100 transform -rotate-1 hover:-rotate-2 border-4 border-board-logo-border hover:border-gray-700 rounded-md hover:bg-gray-800 w-min'>
-              <span className='whitespace-nowrap text-sm uppercase tracking-wider leading-4'>The</span>
-              <h1 className='whitespace-nowrap text-2xl text-center uppercase tracking-wider font-medium'>Quest Board</h1>
+              <span className='whitespace-nowrap text-sm uppercase tracking-wide leading-4'>The</span>
+              <h1 className='whitespace-nowrap text-2xl text-center uppercase tracking-wide font-medium'>Quest Board</h1>
             </a>
           </Link>
         </header>
