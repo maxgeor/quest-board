@@ -18,11 +18,11 @@ export default function Card({ id, quest }) {
           </p>  
         </div>
         {quest.has_reward && <>
-        <div className='bg-gray-300/50 rounded p-2 w-full flex justify-center font-serif space-x-2'>
+        <div className='bg-gray-300/40 border-l-2 border-gray-400/50 rounded-r py-2 px-2.5 w-full flex justify-center font-serif space-x-2'>
           <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
             <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
           </span>
-          <span className='text-gray-800'>
+          <p className='text-gray-800'>
             {quest.custom_reward
               ? quest.custom_reward
               : <span className='space-x-1'>
@@ -34,7 +34,7 @@ export default function Card({ id, quest }) {
                   </span>
                 </span>
             }
-          </span>
+          </p>
         </div>
         </>}
         <span className='text-sm font-mono text-center text-gray-500'>{quest.posted_on}</span>
