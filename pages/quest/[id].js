@@ -56,14 +56,14 @@ export default function Quest({ quest }) {
                   <span className='text-gray-800 space-x-1'>
                     {quest.fields.custom_reward
                       ? quest.fields.custom_reward
-                      : <span>
-                          <span className='text-lg'>{quest.fields.reward_amount}</span>
-                          <span className='text-sm'>
+                      : <p className='flex items-baseline space-x-1'>
+                          <p className='text-lg leading-6'>{quest.fields.reward_amount}</p>
+                          <p className='text-sm'>
                             {quest.fields.custom_token
                               ? quest.fields.custom_token.toUpperCase().trim()
                               : quest.fields.reward_type}  
-                          </span>
-                        </span>
+                          </p>
+                        </p>
                     }
                   </span>
                 </div>  
