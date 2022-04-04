@@ -43,7 +43,7 @@ export default function Quest({ quest }) {
                 </span>
                 {quest.fields.project_link 
                   ? <Link href={`${quest.fields.project_link}`}>
-                      <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-solid hover:decoration-gray-900 decoration-gray-500 underline-offset-4'>{quest.fields.project.trim()}</a>
+                      <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4'>{quest.fields.project.trim()}</a>
                     </Link>
                   : <span className='text-gray-800 text-lg'>{quest.fields.project.trim()}</span>
                 }
@@ -73,7 +73,7 @@ export default function Quest({ quest }) {
                   <Image alt="Hand icon" src='/icons/hand.png' width={24} height={24} />
                 </span>
                 <p className='text-lg'>
-                  Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-500 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
+                  Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
                 </p>
               </div>
             </div>

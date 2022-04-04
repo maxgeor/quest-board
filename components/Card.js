@@ -19,21 +19,21 @@ export default function Card({ id, quest }) {
         </div>
         {quest.has_reward && <>
         <div className='bg-gray-300/40 border-l-2 border-gray-400/30 rounded-r py-2 px-3 w-full'>
-          <div className='flex justify-center font-serif -ml-0.5 space-x-2'>
+          <div className='flex items-center justify-center font-serif -ml-0.5 space-x-2'>
             <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
               <Image alt="Reward" src='/icons/bag.png' width={24} height={24} />
             </span>
             <p className='text-gray-800'>
               {quest.custom_reward
                 ? quest.custom_reward
-                : <span className='space-x-1'>
-                    <span className='text-lg'>{quest.reward_amount}</span>
-                    <span className='text-sm'>
+                : <p className='flex items-baseline space-x-1'>
+                    <p className='text-lg leading-6'>{quest.reward_amount}</p>
+                    <p className='text-sm'>
                       {quest.custom_token
                         ? quest.custom_token.toUpperCase().trim()
                         : quest.reward_type}  
-                    </span>
-                  </span>
+                    </p>
+                  </p>
               }
             </p>
           </div>
