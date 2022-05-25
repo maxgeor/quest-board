@@ -1,8 +1,8 @@
 import Role from "../components/Role";
 
 const getAllRoles = (roles, otherRoles) => {
-  return (otherRoles ? [...roles, ...otherRoles.split(', ')] : roles)
-          .filter(role => role !== 'Other...');
+  const allRoles = otherRoles ? [...roles, ...otherRoles.split(', ')] : [...roles]
+  return allRoles.filter(role => role !== 'Other...');
 }
 
 const bundleRoles = (roles, otherRoles, useUnderlines) => {

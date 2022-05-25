@@ -8,12 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import { bundleRoles, getAllRoles } from '../../utils/handleRoles'
 
 export default function Quest({ quest }) {
-  const bundledRoles = bundleRoles(quest.fields.roles, quest.fields.other_roles);
-
-  const getQuestTitle = () => {
-    const allRoles = getAllRoles(quest.fields.roles, quest.fields.other_roles);
-    return `${allRoles.join(', ')} Needed!`;
-  }
+  const allRoles = getAllRoles(quest.fields.roles, quest.fields.other_roles);
 
   return (
     <>
@@ -21,7 +16,7 @@ export default function Quest({ quest }) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <title>Quest: {getQuestTitle()}</title>
+        <title>{`Quest: ${allRoles.join(', ')} Needed!`}</title>
       </Head>
       <div className='w-full max-auto sm:pb-24'>
         <header className='flex justify-center my-9'>
@@ -35,46 +30,56 @@ export default function Quest({ quest }) {
         <main className={`py-6 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-6 mt-1'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-9'>
-            <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-900'>{bundledRoles} Needed!</h1>
-            <div className='space-y-6 bg-gray-300/50 p-6 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
-              <div className=' flex items-center font-serif space-x-3'>
-                <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                  <Image alt="Group icon" src='/icons/group.png' width={24} height={24} />
-                </span>
-                {quest.fields.project_link 
-                  ? <Link href={`${quest.fields.project_link}`}>
-                      <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4'>{quest.fields.project.trim()}</a>
-                    </Link>
-                  : <span className='text-gray-800 text-lg'>{quest.fields.project.trim()}</span>
-                }
-              </div>
-              {quest.fields.has_reward && <>
+            <div className='flex flex-col items-center space-y-6'>
+              <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-4 text-gray-900'>{quest.fields.title}</h1>
+            </div>
+            <div className='bg-gray-300/50 pt-0 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
+              <div className='space-y-6 p-6'>
+                <div className=' flex items-center font-serif space-x-3'>
+                  <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
+                    <Image alt="Group icon" src='/icons/group.png' width={24} height={24} />
+                  </span>
+                  {quest.fields.project_link 
+                    ? <Link href={`${quest.fields.project_link}`}>
+                        <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4'>{quest.fields.project.trim()}</a>
+                      </Link>
+                    : <span className='text-gray-800 text-lg'>{quest.fields.project.trim()}</span>
+                  }
+                </div>
+                {quest.fields.has_reward && <>
+                  <div className='flex items-center font-serif space-x-3'>
+                    <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
+                      <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
+                    </span>
+                    <span className='text-gray-800 space-x-1'>
+                      {quest.fields.custom_reward
+                        ? quest.fields.custom_reward
+                        : <p className='flex items-baseline space-x-1'>
+                            <p className='text-lg leading-6'>{quest.fields.reward_amount}</p>
+                            <p className='text-sm'>
+                              {quest.fields.custom_token
+                                ? quest.fields.custom_token.toUpperCase().trim()
+                                : quest.fields.reward_type}  
+                            </p>
+                          </p>
+                      }
+                    </span>
+                  </div>  
+                </>}
                 <div className='flex items-center font-serif space-x-3'>
                   <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                    <Image alt="Bag icon" src='/icons/bag.png' width={24} height={24} />
+                    <Image alt="Hand icon" src='/icons/hand.png' width={24} height={24} />
                   </span>
-                  <span className='text-gray-800 space-x-1'>
-                    {quest.fields.custom_reward
-                      ? quest.fields.custom_reward
-                      : <p className='flex items-baseline space-x-1'>
-                          <p className='text-lg leading-6'>{quest.fields.reward_amount}</p>
-                          <p className='text-sm'>
-                            {quest.fields.custom_token
-                              ? quest.fields.custom_token.toUpperCase().trim()
-                              : quest.fields.reward_type}  
-                          </p>
-                        </p>
-                    }
-                  </span>
-                </div>  
-              </>}
-              <div className=' flex items-center font-serif space-x-3'>
-                <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
-                  <Image alt="Hand icon" src='/icons/hand.png' width={24} height={24} />
-                </span>
-                <p className='text-lg'>
-                  Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
-                </p>
+                  <p className='text-lg'>
+                    Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4 text-gray-900'>Loot Discord</a></Link>.
+                  </p>
+                </div>
+              </div>
+              <div className='flex space-x-2 justify-center py-3 px-6 border-t border-gray-400/15 bg-gray-400/20 rounded-b-lg'>
+                <p>Roles:</p>
+                {allRoles?.map((role, index) => (
+                  <span key={index} className='text-base bg-gray-600 text-gray-200 rounded-md px-2 py-0.5 tracking-wider'>{role}</span>
+                ))}
               </div>
             </div>
           </div>
