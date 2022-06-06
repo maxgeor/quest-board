@@ -1,6 +1,6 @@
 const getAllRoles = (roles, otherRoles) => {
   const allRoles = otherRoles 
-                   ? [...otherRoles.split(', ')] 
+                   ? [...roles, ...otherRoles.split(', ')] 
                    : [...roles]
 
   return allRoles.filter(role => role !== 'Other...');
