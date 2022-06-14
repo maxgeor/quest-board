@@ -36,6 +36,7 @@ module.exports = {
       },
       fontSize: {
         '3xl': ['1.75rem', '2.25rem'],
+        '5xl': ['2.75rem', '3rem'],
       },
       borderWidth: {
         '8': '8px',
