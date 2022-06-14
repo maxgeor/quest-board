@@ -22,7 +22,7 @@ export default function Card({ id, quest }) {
             <h3 className='line-clamp-2 text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
               {title}
             </h3>
-            <p className='text-lg font-serif text-gray-700 text-center mx-6'>
+            <p className='text-lg font-serif text-gray-600 text-center mx-6'>
               <span className='text-gray-500 text-sm mr-0.5'>for</span> {quest.project}
             </p>  
           </div>
