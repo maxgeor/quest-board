@@ -19,7 +19,7 @@ export default function Card({ id, quest }) {
       <a className={`group flex flex-col justify-between items-center p-6 h-full min-h-[12rem] md:min-h-[13rem] max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl active:shadow-lg z-10 md:justify-between hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform odd:hover:-rotate-1 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black cursor-default`}>
         <section className='flex flex-col items-center w-full space-y-6'>
           <div className='max-w-sm mx-auto space-y-3'>
-            <h3 className='text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
+            <h3 className='line-clamp-2 text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
               {title}
             </h3>
             <p className='text-lg font-serif text-gray-700 text-center mx-6'>
