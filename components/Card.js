@@ -32,7 +32,7 @@ export default function Card({ id, quest }) {
                 <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
                   <Image alt="Reward" src='/icons/bag.png' width={24} height={24} />
                 </span>
-                <div className='inline-block text-gray-800'>
+                <div className='inline-block text-gray-700'>
                   {quest.custom_reward
                     ? quest.custom_reward
                     : <div className='flex items-baseline space-x-1'>
