@@ -19,10 +19,10 @@ export default function Card({ id, quest }) {
       <a className={`group flex flex-col justify-between items-center p-6 h-full min-h-[12rem] md:min-h-[13rem] max-w-md w-full md:max-w-none mx-auto shadow-lg hover:shadow-xl active:shadow-lg z-10 md:justify-between hover:scale-101 md:active:scale-100 transition duration-75 rounded-md transform odd:hover:-rotate-1 even:hover:rotate-1 bg-gray-200 hover:bg-gray-100 text-black cursor-default`}>
         <section className='flex flex-col items-center w-full space-y-6'>
           <div className='max-w-sm mx-auto space-y-3'>
-            <h3 className='line-clamp-2 text-2xl font-medium text-gray-900 font-serif text-center mt-0'>
+            <h3 className='line-clamp-2 text-2xl font-medium text-gray-800 font-serif text-center mt-0'>
               {title}
             </h3>
-            <p className='text-lg font-serif text-gray-700 text-center mx-6'>
+            <p className='text-lg font-serif text-gray-600 text-center mx-6'>
               <span className='text-gray-500 text-sm mr-0.5'>for</span> {quest.project}
             </p>  
           </div>
@@ -32,15 +32,16 @@ export default function Card({ id, quest }) {
                 <span className='flex items-center justify-center flex-shrink-0 h-6 w-6 self-start'>
                   <Image alt="Reward" src='/icons/bag.png' width={24} height={24} />
                 </span>
-                <div className='inline-block text-gray-700'>
+                <div className='inline-block text-gray-600'>
                   {quest.custom_reward
                     ? quest.custom_reward
                     : <div className='flex items-baseline space-x-1'>
                         <div className='text-lg leading-6'>{quest.reward_amount}</div>
-                        <div className='text-sm'>
+                        <div className='text-sm text-gray-600'>
                           {quest.custom_token
                             ? quest.custom_token.toUpperCase().trim()
-                            : quest.reward_type}  
+                            : quest.reward_type
+                          }  
                         </div>
                       </div>
                   }

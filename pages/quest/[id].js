@@ -37,23 +37,23 @@ export default function Quest({ quest }) {
             </a>
           </Link>
         </header>
-        <main className={`py-6 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-900 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
+        <main className={`py-6 pb-40 px-6 sm:px-16 mx-auto min-h-[110vh] h-full flex flex-col items-center bg-gray-200 text-gray-800 sm:max-w-3xl rounded-xl rounded-b-none sm:rounded-b-xl shadow-2xl`}>
           <span className='text-sm font-mono text-center text-gray-600 mb-6 mt-1'>{quest.fields.posted_on}</span>
           <div className='w-full relative h-full space-y-9'>
             <div className='flex flex-col items-center space-y-6'>
-              <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-2 text-gray-900'>
+              <h1 className='font-semibold text-center text-4xl sm:text-5xl mx-2 text-gray-800'>
                 {title}
               </h1>
             </div>
             <div className='bg-gray-300/50 pt-0 rounded-lg text-lg flex flex-col max-w-lg mx-auto'>
-              <div className='space-y-6 p-6 text-gray-700'>
+              <div className='space-y-6 p-6 text-gray-600'>
                 <div className=' flex items-center font-serif space-x-3'>
                   <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                     <Image alt="Group icon" src='/icons/group.png' width={24} height={24} />
                   </span>
                   {quest.fields.project_link 
                     ? <Link href={`${quest.fields.project_link}`}>
-                        <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 hover:text-gray-900 underline-offset-4'>{quest.fields.project.trim()}</a>
+                        <a target="_blank" rel="noreferrer" className='text-lg underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 hover:text-gray-800 underline-offset-4'>{quest.fields.project.trim()}</a>
                       </Link>
                     : <span className='text-lg'>{quest.fields.project.trim()}</span>
                   }
@@ -83,7 +83,7 @@ export default function Quest({ quest }) {
                     <Image alt="Hand icon" src='/icons/hand.png' width={24} height={24} />
                   </span>
                   <p className='text-lg'>
-                    Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-900 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4'>Loot Discord</a></Link>.
+                    Interested? Message <span className='text-base font-medium py-0.5 px-1.5 bg-gray-400/25 border border-gray-400/30 rounded font-mono text-gray-800 mx-0.5'>{quest.fields.poster.trim()}</span> in the <Link href={'https://discord.com/invite/KuYyKXam9G'} ><a target="_blank" rel="noreferrer" className='underline decoration-1 decoration-dashed hover:decoration-solid hover:decoration-gray-900 decoration-gray-600 underline-offset-4'>Loot Discord</a></Link>.
                   </p>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function Quest({ quest }) {
                 <span className='flex items-center justify-center flex-shrink-0 h-7 w-7 self-start'>
                   <BriefcaseIcon className='h-6 w-6 text-gray-600' />
                 </span>
-                <p>{allRoles?.join(', ')}</p>
+                <p className='text-gray-600'>{allRoles?.join(', ')}</p>
               </div>
             </div>
           </div>
