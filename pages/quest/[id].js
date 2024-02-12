@@ -108,7 +108,7 @@ export async function getServerSideProps(context) {
   try {
     const { id } = await context.params;
     const res = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/quests/${id}`, {
-      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
     });
     const data = await res.json();
     return { props: { quest: data } }

@@ -39,7 +39,7 @@ export default function Home({ quests }) {
 export async function getServerSideProps() {
   try {
     const res = await fetch(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/quests?view=quests`, {
-      headers: { Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}` }
+      headers: { Authorization: `Bearer ${process.env.AIRTABLE_ACCESS_TOKEN}` }
     });
     const data = await res.json();
     const records = minifyRecords(data.records);
